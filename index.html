@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site com Video Centralizado</title>
+    <link rel="stylesheet" href="car.css">
+</head>
+<body>
+
+    <div id="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="carros.html">Carros</a>
+        <a href="simulador.html">Simular financiamento</a>
+        <a href="locCont.html">Localização e Contatos</a>
+    </div>
+
+    <button id="openBtn" onclick="openSidebar()">☰ Menu</button>
+
+    <div class="banner">
+        <img src="imagem 1.jfif" alt="Banner 1" class="slide active">
+        <img src="imagem 2.jpg" alt="Banner 2" class="slide">
+        <img src="imagem 3.jpg" alt="Banner 3" class="slide">
+    </div>
+
+    <!-- Video Container -->
+    <div class="video-container">
+        <video id="videoPlayer" controls>
+            <source src="Fast and.mp4" type="video/mp4">
+            Seu navegador não suporta a tag de vídeo.
+        </video>
+    </div>
+
+    <div class="chat-button">
+        <button id="chatBtn" onclick="openChat()">Fale com o vendedor</button>
+    </div>
+
+    <div id="chatWindow" class="chat-window">
+        <div class="chat-header">
+            <span>Converse com o vendedor</span>
+            <button onclick="closeChat()" class="close-chat">&times;</button>
+        </div>
+        <div class="chat-body">
+            <p>Olá! Como posso ajudá-lo?</p>
+        </div>
+        <div class="chat-footer">
+            <input type="text" placeholder="Digite sua mensagem...">
+            <button>Enviar</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Jaderson Cunha</p>
+        </div>
+    </footer>
+
+    <script src="car.js"></script>
+</body>
+</html>

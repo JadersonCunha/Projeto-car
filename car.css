@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
+
+body {
+    background: linear-gradient(85deg, rgb(80, 80, 232), white);
+    font-family: Faster One;
+    margin: 0;
+    padding: 0;
+}
+
+
+#sidebar {
+    height: calc(100% - 300px);
+    width: 250px;
+    position: fixed;
+    top: 300px;
+    left: -250px;
+    background-color: #8A2BE2;
+    overflow-x: hidden;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+#sidebar a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    display: block;
+    transition: 0.3s;
+}
+
+#sidebar a:hover {
+    background-color: #7B26C9;
+}
+
+#openBtn {
+    font-size: 16px; 
+    background-color: #8A2BE2;
+    color: rgb(12, 7, 45);
+    border: none;
+    padding: 15px; 
+    cursor: pointer;
+    position: fixed;
+    width: auto;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+
+#openBtn:hover {
+    background-color: #7B26C9;
+}
+
+
+.banner {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+}
+
+.banner img.active {
+    opacity: 1;
+}
+
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; 
+    overflow: hidden;
+    position: relative;
+    
+}
+
+
+.video-container video {
+    width: 80%;
+    max-width: 800px;
+    opacity: 0;
+    transform: translateY(100vh); 
+    animation: slideUp 1s ease-out forwards; 
+    
+}
+
+
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100vh); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#chatBtn {
+    background-color: rgba(69, 238, 13, 0.999);
+    color: rgb(0, 0, 0);
+    font-family: Faster One;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#chatBtn:hover {
+    background-color: #006400;
+}
+
+.chat-window {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.chat-header {
+    background-color: #8A2BE2;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-chat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chat-body {
+    padding: 10px;
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color: #f1f1f1;
+}
+
+.chat-footer {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chat-footer input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.chat-footer button {
+    background-color: #8A2BE2;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat-footer button:hover {
+    background-color: #7B26C9;
+}
+
+img{
+    display: flex;
+    flex-wrap: wrap;
+    width: 250px;
+    height: 150px;
+}
+
+.car-gallery,.car-item img{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    margin: 1rem;
+}
+
+.car-gallery p{
+    text-align: center;
+}
+
+img:hover{
+    transition: transform 0.3s ease, filter 0.3 ease;
+    transform: scale(1.1);
+    filter: brightness(1.2);
+    cursor: pointer;
+}
+
+
+
+header h1{
+    color: black;
+    text-align: center;
+    font-size: 45px;
+}
+
+form label{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 2rem;
+    justify-content: center;
+    font-size: 25px;
+}
+
+input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+footer {
+    background-color: #8A2BE2;
+    color: #000000;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+.container {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(5, 122, 28, 0.893);
+    width: 350px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+}
+
+input {
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    align-items: center;
+}
+
+button {
+    padding: 10px;
+    background-color: #460567;
+    color: rgb(237, 221, 221);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #40BFB2;
+}
+
+.resultado {
+    margin-top: 20px;
+    width: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#valorParcela, #valorTotalFinanciamento {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+    
+}
+
+.conteiner p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#simuladorForm{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.maps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; 
+    overflow: hidden;
+    position: relative;
+}
+
+.contatos{
+    display: flex;
+    padding: 1rem;
+    color: black;
+    cursor: pointer;
+}
+
+.contatos p{
+    padding: 8px;
+    color: black;
+    cursor: pointer;
+
+}

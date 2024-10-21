@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Financeiro - Compra de Carro</title>
+    <link rel="stylesheet" href="car.css">
+</head>
+<body>
+
+    
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="carros.html">Carros</a>
+        <a href="simulador.html">Simular financiamento</a>
+        <a href="locCont.html">Localização e Contatos</a>
+    </div>
+
+    
+    <button id="openBtn" onclick="openSidebar()">☰ Menu</button>
+
+ 
+    <div class="banner">
+        <img src="imagem 1.jfif" alt="Banner 1" class="slide active">
+        <img src="imagem 2.jpg" alt="Banner 2" class="slide">
+        <img src="imagem 3.jpg" alt="Banner 3" class="slide">
+    </div>
+
+    <center>
+    <div class="container">
+        <h1>Simulador Financeiro - Compra de Carro</h1>
+        <form id="simuladorForm">
+            <label for="precoCarro">Preço do Carro (R$):</label>
+            <input type="number" id="precoCarro" required>
+
+            <label for="valorEntrada">Valor de Entrada (R$):</label>
+            <input type="number" id="valorEntrada" required>
+
+            <label for="numParcelas">Número de Parcelas:</label>
+            <input type="number" id="numParcelas" required>
+
+            <label for="taxaJuros">Taxa de Juros (% ao mês):</label>
+            <input type="number" id="taxaJuros" required>
+
+            <button type="button" onclick="calcularFinanciamento()">Calcular</button>
+        </form>
+
+        <div id="resultado" class="resultado">
+            <h2>Detalhes do Financiamento</h2>
+            <p id="valorParcela"></p>
+            <p id="valorTotalFinanciamento"></p>
+        </div>
+    </div>
+    </center>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Jaderson Cunha</p>
+        </div>
+    </footer>
+
+    <script src="car.js"></script>
+</body>
+</html>
